@@ -42,5 +42,5 @@ plugins:
 
 nav:
   - index.md
-  - example:
-      - example/example.md
+  - technical-topics:
+      - technical-topics/example.md
