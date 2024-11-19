@@ -1,0 +1,29 @@
+---
+name: Publish
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    name: Publish documentation
+    runs-on: [gha-private-runners]
+    steps:
+      - name: Checkout sources
+        uses: actions/checkout@v3
+
+      - name: Set git config
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.x
+      - name: Mdocs install and deploy
+        run: |
+          pip install mkdocs-material
+          pip install -r requirements.txt
+          mkdocs gh-deploy --force -s

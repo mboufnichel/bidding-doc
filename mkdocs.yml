@@ -1,0 +1,46 @@
+---
+site_name: Bidding technical docs
+site_url: https://pages.github.com/mboufnichel/bidding-doc
+repo_url: https://github.com/mboufnichel/bidding-doc
+repo_name: bidding-doc
+edit_uri: edit/mkdocs/docs/
+
+extra_css:
+  - css/custom.css
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - footnotes
+  - attr_list
+  - toc:
+      toc_depth: 2-6
+      permalink: ⚓︎
+
+theme:
+  name: material
+  logo: img/logo.png
+  favicon: img/favicon.ico
+  icon:
+    repo: fontawesome/brands/github
+    edit: material/file-edit-outline
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    - navigation.sections
+    - navigation.expand
+    - navigation.indexes
+
+plugins:
+  - git-revision-date-localized:
+      type: datetime
+      enable_creation_date: false
+  - search
+
+nav:
+  - index.md
+  - example:
+      - example/example.md
