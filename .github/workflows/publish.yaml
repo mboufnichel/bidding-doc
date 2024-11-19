@@ -5,6 +5,9 @@ on:
   push:
     branches:
       - master
+permissions:
+  contents: write
+  actions: read
 
 jobs:
   build:
