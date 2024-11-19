@@ -19,7 +19,7 @@ markdown_extensions:
 
 theme:
   name: material
-  logo: img/logo.png
+  logo: img/logo.jpg
   favicon: img/favicon.ico
   icon:
     repo: fontawesome/brands/github
