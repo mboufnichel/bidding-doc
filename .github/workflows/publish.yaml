@@ -9,7 +9,7 @@ on:
 jobs:
   build:
     name: Publish documentation
-    runs-on: [gha-private-runners]
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout sources
         uses: actions/checkout@v3
