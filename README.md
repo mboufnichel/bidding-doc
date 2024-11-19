@@ -2,7 +2,7 @@
 
 Bidding technical docs
 
-- Page : https://pages.github.com/mboufnichel/bidding-doc
+- Page : https://mboufnichel.github.io/bidding-doc/
 - Based on: [Mkdocs](https://www.mkDocs.org/) with [Material Theme](https://github.com/squidfunk/mkdocs-material)
 - Run: `mkdocs serve`
 
