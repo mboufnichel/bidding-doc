@@ -42,8 +42,9 @@ plugins:
 
 nav:
   - index.md
+  - jobs:
+      - jobs/trigger.md
   - gloassary:
       - glossary/glossary.md
   - technical-topics:
       - technical-topics/example.md
-      - technical-topics/test-data.md
