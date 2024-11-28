@@ -39,8 +39,10 @@ plugins:
       type: datetime
       enable_creation_date: false
   - search
+  - mkdocs-material-adr/adr
 
 nav:
   - index.md
   - technical-topics:
       - technical-topics/example.md
+      - technical-topics/test-data.md
