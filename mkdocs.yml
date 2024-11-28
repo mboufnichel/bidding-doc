@@ -42,7 +42,8 @@ plugins:
 
 nav:
   - index.md
-  - glossary/glossary.md
+  - gloassary:
+      - glossary/glossary.md
   - technical-topics:
       - technical-topics/example.md
       - technical-topics/test-data.md
