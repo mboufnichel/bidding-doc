@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://mboufnichel.github.io/bidding-doc/technical-topics/example/">
+        <link rel="canonical" href="https://mboufnichel.github.io/bidding-doc/technical-topics/test-data/">
       
       
         <link rel="prev" href="../../glossary/glossary/">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Understanding Lock Modes in Databases (Kotlin Examples) - Bidding technical docs</title>
+        <title>Best Practices for Test Data in Unit and Integration Tests - Bidding technical docs</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#table-of-contents" class="md-skip">
+        <a href="#1-use-test-fixtures-for-consistency" class="md-skip">
           Skip to content
         </a>
       
@@ -99,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Understanding Lock Modes in Databases (Kotlin Examples)
+              Best Practices for Test Data in Unit and Integration Tests
             
           </span>
         </div>
@@ -198,7 +198,7 @@
   
     
   
-  jobs
+  Jobs
 
         </a>
       </li>
@@ -218,7 +218,7 @@
   
     
   
-  gloassary
+  Glossary
 
         </a>
       </li>
@@ -240,7 +240,7 @@
   
     
   
-  technical-topics
+  Technical-topics
 
         </a>
       </li>
@@ -350,7 +350,7 @@
             
   
   <span class="md-ellipsis">
-    jobs
+    Jobs
   </span>
   
 
@@ -360,7 +360,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
-            jobs
+            Jobs
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -424,7 +424,7 @@
             
   
   <span class="md-ellipsis">
-    gloassary
+    Glossary
   </span>
   
 
@@ -434,7 +434,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            gloassary
+            Glossary
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -501,7 +501,7 @@
             
   
   <span class="md-ellipsis">
-    technical-topics
+    Technical-topics
   </span>
   
 
@@ -511,7 +511,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
-            technical-topics
+            Technical-topics
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -533,7 +533,7 @@
           
   
   <span class="md-ellipsis">
-    Understanding Lock Modes in Databases (Kotlin Examples)
+    Best Practices for Test Data in Unit and Integration Tests
   </span>
   
 
@@ -544,7 +544,7 @@
         
   
   <span class="md-ellipsis">
-    Understanding Lock Modes in Databases (Kotlin Examples)
+    Best Practices for Test Data in Unit and Integration Tests
   </span>
   
 
@@ -564,64 +564,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#table-of-contents" class="md-nav__link">
+  <a href="#1-use-test-fixtures-for-consistency" class="md-nav__link">
     <span class="md-ellipsis">
-      Table of Contents
+      1. Use Test Fixtures for Consistency
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-are-lock-modes" class="md-nav__link">
+  <a href="#2-ensure-idempotency" class="md-nav__link">
     <span class="md-ellipsis">
-      What Are Lock Modes?
+      2. Ensure Idempotency
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#overview-of-lock-types" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overview of Lock Types
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lock-modes-in-postgresql" class="md-nav__link">
-    <span class="md-ellipsis">
-      Lock Modes in PostgreSQL
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Lock Modes in PostgreSQL">
+    <nav class="md-nav" aria-label="2. Ensure Idempotency">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#shared-locks-share" class="md-nav__link">
+  <a href="#best-practices" class="md-nav__link">
     <span class="md-ellipsis">
-      Shared Locks (SHARE)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#exclusive-locks-exclusive" class="md-nav__link">
-    <span class="md-ellipsis">
-      Exclusive Locks (EXCLUSIVE)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#row-level-locks-for-update-for-share" class="md-nav__link">
-    <span class="md-ellipsis">
-      Row-Level Locks (FOR UPDATE, FOR SHARE)
+      Best Practices:
     </span>
   </a>
   
@@ -633,50 +597,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#lock-modes-in-jpa" class="md-nav__link">
+  <a href="#3-minimize-test-data-scope" class="md-nav__link">
     <span class="md-ellipsis">
-      Lock Modes in JPA
+      3. Minimize Test Data Scope
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Lock Modes in JPA">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-pessimistic-locks" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Pessimistic Locks
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1. Pessimistic Locks">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#pessimistic-read-pessimistic_read" class="md-nav__link">
-    <span class="md-ellipsis">
-      Pessimistic Read (PESSIMISTIC_READ)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pessimistic-write-pessimistic_write" class="md-nav__link">
-    <span class="md-ellipsis">
-      Pessimistic Write (PESSIMISTIC_WRITE)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -721,64 +646,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#table-of-contents" class="md-nav__link">
+  <a href="#1-use-test-fixtures-for-consistency" class="md-nav__link">
     <span class="md-ellipsis">
-      Table of Contents
+      1. Use Test Fixtures for Consistency
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-are-lock-modes" class="md-nav__link">
+  <a href="#2-ensure-idempotency" class="md-nav__link">
     <span class="md-ellipsis">
-      What Are Lock Modes?
+      2. Ensure Idempotency
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#overview-of-lock-types" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overview of Lock Types
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lock-modes-in-postgresql" class="md-nav__link">
-    <span class="md-ellipsis">
-      Lock Modes in PostgreSQL
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Lock Modes in PostgreSQL">
+    <nav class="md-nav" aria-label="2. Ensure Idempotency">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#shared-locks-share" class="md-nav__link">
+  <a href="#best-practices" class="md-nav__link">
     <span class="md-ellipsis">
-      Shared Locks (SHARE)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#exclusive-locks-exclusive" class="md-nav__link">
-    <span class="md-ellipsis">
-      Exclusive Locks (EXCLUSIVE)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#row-level-locks-for-update-for-share" class="md-nav__link">
-    <span class="md-ellipsis">
-      Row-Level Locks (FOR UPDATE, FOR SHARE)
+      Best Practices:
     </span>
   </a>
   
@@ -790,50 +679,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#lock-modes-in-jpa" class="md-nav__link">
+  <a href="#3-minimize-test-data-scope" class="md-nav__link">
     <span class="md-ellipsis">
-      Lock Modes in JPA
+      3. Minimize Test Data Scope
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Lock Modes in JPA">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-pessimistic-locks" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Pessimistic Locks
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1. Pessimistic Locks">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#pessimistic-read-pessimistic_read" class="md-nav__link">
-    <span class="md-ellipsis">
-      Pessimistic Read (PESSIMISTIC_READ)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pessimistic-write-pessimistic_write" class="md-nav__link">
-    <span class="md-ellipsis">
-      Pessimistic Write (PESSIMISTIC_WRITE)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -855,80 +705,37 @@
   
 
 
-<h1 id="understanding-lock-modes-in-databases-kotlin-examples">Understanding Lock Modes in Databases (Kotlin Examples)<a class="headerlink" href="#understanding-lock-modes-in-databases-kotlin-examples" title="Permanent link">⚓︎</a></h1>
-<p>Locking is a fundamental concept in relational databases to ensure data consistency and prevent conflicts during concurrent access. Different lock modes control how transactions interact with each other when accessing the same data. This is essential to avoid anomalies like <strong>lost updates</strong>, <strong>dirty reads</strong>, or <strong>phantom reads</strong>. Lock modes define how much of the database is locked during a transaction and the impact on other transactions.</p>
-<h2 id="table-of-contents">Table of Contents<a class="headerlink" href="#table-of-contents" title="Permanent link">⚓︎</a></h2>
+<h1 id="best-practices-for-test-data-in-unit-and-integration-tests">Best Practices for Test Data in Unit and Integration Tests<a class="headerlink" href="#best-practices-for-test-data-in-unit-and-integration-tests" title="Permanent link">⚓︎</a></h1>
+<h2 id="1-use-test-fixtures-for-consistency">1. Use Test Fixtures for Consistency<a class="headerlink" href="#1-use-test-fixtures-for-consistency" title="Permanent link">⚓︎</a></h2>
 <ul>
-<li><a href="#what-are-lock-modes">What Are Lock Modes?</a></li>
-<li><a href="#overview-of-lock-types">Overview of Lock Types</a></li>
-<li><a href="#lock-modes-in-postgresql">Lock Modes in PostgreSQL</a></li>
-<li><a href="#lock-modes-in-jpa">Lock Modes in JPA</a></li>
-<li><a href="#pessimistic-locks">Pessimistic Locks</a><ul>
-<li><a href="#pessimistic-read">Pessimistic Read</a></li>
-<li><a href="#pessimistic-write">Pessimistic Write</a></li>
+<li>Create reusable test data objects or builders for consistent setups.</li>
+<li>Example in Kotlin:
+  ```kotlin
+  object UserTestFixture {
+      fun createValidUser(): User {
+          return User(name = "Alice", email = "alice@xyz.com", isActive = true)
+      }
+  }</li>
 </ul>
-</li>
-<li><a href="#optimistic-locks">Optimistic Locks</a><ul>
-<li><a href="#optimistic-locking">Optimistic Locking</a></li>
-<li><a href="#optimistic-locking-with-increment">Optimistic Locking with Increment</a></li>
-</ul>
-</li>
-<li><a href="#how-lock-modes-affect-concurrency">How Lock Modes Affect Concurrency</a></li>
-<li><a href="#choosing-the-right-lock-mode">Choosing the Right Lock Mode</a></li>
-</ul>
-<hr />
-<h2 id="what-are-lock-modes">What Are Lock Modes?<a class="headerlink" href="#what-are-lock-modes" title="Permanent link">⚓︎</a></h2>
-<p>Lock modes define how database rows, tables, or other resources are locked during a transaction. They determine how concurrent transactions interact with the same data. In general, a <strong>lock</strong> prevents other transactions from making conflicting changes to the same resource.</p>
-<p>Locks can be classified into two categories:
-- <strong>Pessimistic Locking</strong>: Locks resources immediately to prevent conflicts.
-- <strong>Optimistic Locking</strong>: Assumes minimal conflicts and checks for issues only when committing.</p>
-<hr />
-<h2 id="overview-of-lock-types">Overview of Lock Types<a class="headerlink" href="#overview-of-lock-types" title="Permanent link">⚓︎</a></h2>
-<p>There are several types of locks, each serving a specific purpose in ensuring data integrity during concurrent access.</p>
-<ol>
-<li><strong>Row-Level Locks</strong>: Lock individual rows in a table.</li>
-<li><strong>Table-Level Locks</strong>: Lock an entire table.</li>
-<li><strong>Advisory Locks</strong>: Application-defined locks to prevent certain transactions from conflicting with each other.</li>
-<li><strong>Index and Tuple Locks</strong>: Lock specific indexes or data tuples.</li>
-</ol>
-<hr />
-<h2 id="lock-modes-in-postgresql">Lock Modes in PostgreSQL<a class="headerlink" href="#lock-modes-in-postgresql" title="Permanent link">⚓︎</a></h2>
-<p>PostgreSQL provides a variety of lock modes that control how transactions interact with data at different levels.</p>
-<h3 id="shared-locks-share">Shared Locks (<code>SHARE</code>)<a class="headerlink" href="#shared-locks-share" title="Permanent link">⚓︎</a></h3>
+<h2 id="2-ensure-idempotency">2. Ensure Idempotency<a class="headerlink" href="#2-ensure-idempotency" title="Permanent link">⚓︎</a></h2>
 <ul>
-<li><strong>Purpose</strong>: Allows multiple transactions to read a resource concurrently but prevents any transaction from modifying it.</li>
-<li><strong>Use Case</strong>: When you need to read data but don’t want any changes to occur.</li>
+<li>Test data should not depend on the execution order of tests to avoid side effects from previous tests.</li>
+<li>Each test should be independent, meaning it can run in any order and still produce consistent results.</li>
+<li>Use <strong>unique identifiers</strong> (e.g., UUIDs) for test data to prevent conflicts between tests.</li>
 </ul>
-<h3 id="exclusive-locks-exclusive">Exclusive Locks (<code>EXCLUSIVE</code>)<a class="headerlink" href="#exclusive-locks-exclusive" title="Permanent link">⚓︎</a></h3>
+<h3 id="best-practices">Best Practices:<a class="headerlink" href="#best-practices" title="Permanent link">⚓︎</a></h3>
 <ul>
-<li><strong>Purpose</strong>: Prevents any other transaction from acquiring a lock on the resource.</li>
-<li><strong>Use Case</strong>: When you need to ensure that no other transaction modifies or reads the data while you are working with it.</li>
+<li><strong>Avoid shared state</strong> between tests.</li>
+<li>Use <strong>UUIDs</strong> or random values for IDs to ensure uniqueness:
+  ```kotlin
+  val userId = UUID.randomUUID().toString()
+  val user = User(id = userId, name = "Alice", email = "alice@xyz.com")</li>
 </ul>
-<h3 id="row-level-locks-for-update-for-share">Row-Level Locks (<code>FOR UPDATE</code>, <code>FOR SHARE</code>)<a class="headerlink" href="#row-level-locks-for-update-for-share" title="Permanent link">⚓︎</a></h3>
+<h2 id="3-minimize-test-data-scope">3. Minimize Test Data Scope<a class="headerlink" href="#3-minimize-test-data-scope" title="Permanent link">⚓︎</a></h2>
 <ul>
-<li><strong>Purpose</strong>: These are more fine-grained than table-level locks and allow individual rows to be locked.</li>
-<li><strong>Use Case</strong>: Useful for handling concurrent updates to specific rows in the same table.<ul>
-<li><code>FOR UPDATE</code>: Locks the selected rows for update, preventing others from updating them.</li>
-<li><code>FOR SHARE</code>: Similar to <code>FOR UPDATE</code>, but it allows others to also acquire shared locks for reading.</li>
-</ul>
-</li>
-</ul>
-<hr />
-<h2 id="lock-modes-in-jpa">Lock Modes in JPA<a class="headerlink" href="#lock-modes-in-jpa" title="Permanent link">⚓︎</a></h2>
-<p>JPA provides several lock modes that correspond to database lock modes. These lock modes are used with the <code>@Lock</code> annotation and methods like <code>find()</code> or <code>query()</code> to define how data is locked when accessed.</p>
-<h3 id="1-pessimistic-locks">1. <strong>Pessimistic Locks</strong><a class="headerlink" href="#1-pessimistic-locks" title="Permanent link">⚓︎</a></h3>
-<p>These locks are employed to prevent conflicts by immediately acquiring a lock on data. When a transaction acquires a pessimistic lock, it prevents other transactions from modifying or reading the locked resource.</p>
-<h4 id="pessimistic-read-pessimistic_read">Pessimistic Read (<code>PESSIMISTIC_READ</code>)<a class="headerlink" href="#pessimistic-read-pessimistic_read" title="Permanent link">⚓︎</a></h4>
-<ul>
-<li><strong>Definition</strong>: This lock prevents other transactions from modifying the data but allows other transactions to read it.</li>
-<li><strong>Use Case</strong>: Use this lock when you want to allow multiple transactions to read data but not write to it.</li>
-<li><strong>Behavior</strong>: Blocks other transactions from acquiring a <code>PESSIMISTIC_WRITE</code> lock but allows other <code>PESSIMISTIC_READ</code> locks.</li>
-</ul>
-<h4 id="pessimistic-write-pessimistic_write">Pessimistic Write (<code>PESSIMISTIC_WRITE</code>)<a class="headerlink" href="#pessimistic-write-pessimistic_write" title="Permanent link">⚓︎</a></h4>
-<ul>
-<li><strong>Definition</strong>: This lock prevents other transactions from reading or writing the data.</li>
-<li><strong>Use Case</strong>: Use this lock when you need to update data and ensure no one else modifies it during the transaction.</li>
-<li><strong>Behavior</strong>: Blocks both read and write locks from other transactions.</li>
+<li>Provide <strong>only the necessary data</strong> for each test to ensure clarity and reduce complexity.</li>
+<li>Avoid loading unnecessary data or objects that aren't relevant to the specific test being executed.</li>
+<li>Keeping the test data minimal helps improve the speed and maintainability of tests.</li>
 </ul>
 
 
@@ -950,7 +757,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 19, 2024 20:01:20</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 29, 2024 08:51:09</span>
   </span>
 
     

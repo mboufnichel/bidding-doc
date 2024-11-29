@@ -2,18 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://mboufnichel.github.io/bidding-doc/</loc>
-         <lastmod>2024-11-28</lastmod>
+         <lastmod>2024-11-29</lastmod>
     </url>
     <url>
          <loc>https://mboufnichel.github.io/bidding-doc/glossary/glossary/</loc>
-         <lastmod>2024-11-28</lastmod>
+         <lastmod>2024-11-29</lastmod>
     </url>
     <url>
          <loc>https://mboufnichel.github.io/bidding-doc/jobs/trigger/</loc>
-         <lastmod>2024-11-28</lastmod>
+         <lastmod>2024-11-29</lastmod>
     </url>
     <url>
-         <loc>https://mboufnichel.github.io/bidding-doc/technical-topics/example/</loc>
-         <lastmod>2024-11-28</lastmod>
+         <loc>https://mboufnichel.github.io/bidding-doc/technical-topics/test-data/</loc>
+         <lastmod>2024-11-29</lastmod>
     </url>
 </urlset>
